@@ -28,14 +28,18 @@ The correlation matrix (**Figure 1**) offers an initial overview: higher illiter
 
 A regression analysis (**Table 1**) reveals a consistent and statistically meaningful relationship between ethnic composition and key socioeconomic indicators. Specifically, the slope of **0.30** in the *Ethnicity–Unemployment* model indicates that areas with higher proportions of Afro-descendant population tend to experience higher unemployment rates. Conversely, the negative slopes for education variables suggest an inverse association: a slope of **–0.548** for *Attends Education (ages 5–21)* and **–1.09** for *Attends Higher Education* imply that greater ethnic representation is linked to lower school attendance and reduced access to higher education. Finally, the positive slope of **0.10** for *Does Not Read (%)* suggests a slight increase in illiteracy rates as ethnic representation rises. These patterns underscore the structural disparities affecting Afro-descendant communities, particularly in employment and educational attainment.
 
-**Table 1.** Regression results.
+**Table 1.** Regression results (OLS, *n* = 328 neighborhoods). All four slopes are significant at *p* < 0.001.
 
-| X Variable | Y Variable                  | Slope  | Intercept |
-| ---------- | --------------------------- | ------ | --------- |
-| Ethnicity  | Unemployment                | 0.30   | 0.16      |
-| Ethnicity  | Attends Education (5–21)    | −0.548 | 0.71      |
-| Ethnicity  | Attends Higher Education    | −1.09  | 0.44      |
-| Ethnicity  | Does Not Read (%)           | 0.10   | 0.015     |
+| X Variable | Y Variable                  | Slope  | Intercept | Std. Error | 95% CI on slope     | R²    | *p*-value   |
+| ---------- | --------------------------- | ------ | --------- | ---------- | ------------------- | ----- | ----------- |
+| Ethnicity  | Unemployment                | +0.299 | 0.161     | 0.023      | [+0.254, +0.345]    | 0.34  | 3 × 10⁻³¹ ***  |
+| Ethnicity  | Attends Education (5–21)    | −0.549 | 0.715     | 0.074      | [−0.693, −0.404]    | 0.15  | 8 × 10⁻¹³ ***  |
+| Ethnicity  | Attends Higher Education    | −1.092 | 0.442     | 0.086      | [−1.262, −0.922]    | 0.33  | 4 × 10⁻³⁰ ***  |
+| Ethnicity  | Does Not Read (%)           | +0.105 | 0.016     | 0.008      | [+0.089, +0.120]    | 0.35  | 1 × 10⁻³² ***  |
+
+*Significance codes:* `***` *p* < 0.001, `**` *p* < 0.01, `*` *p* < 0.05.
+
+**There is a robust, highly statistically significant association: neighborhoods with a larger Afro-Colombian share systematically have higher unemployment and illiteracy and lower school attendance (*p* < 0.001 in all four regressions, *n* = 328).** Ethnic composition alone explains roughly a third of the cross-neighborhood variance in unemployment, higher education, and illiteracy (R² ≈ 0.33–0.35), and about 15% of the variance in basic-school attendance (R² = 0.15). The 95% confidence intervals on all four slopes exclude zero by a wide margin, so the sign and order of magnitude of the effect are well identified, even if causal interpretation requires additional controls (notably for socioeconomic stratum and historical segregation).
 
 While correlations and regressions reveal inequality, human interpretation alone can miss patterns critical for policy design. That is why clustering models are introduced — to help visualize how neighborhoods can be grouped by similar conditions, making geographic disparities more evident and allowing focused policies. Using attributes such as unemployment, literacy, and education, the model divides Cali into three clusters. In this case, we group by using exclusively the attributes that compose socioeconomic status: *Unemployment*, *Attends Education (ages 5–21)*, *Attends Higher Education*, and *Does Not Read (%)*. This separates the city into brackets that can be explored to understand how ethnicity behaves inside each one.
 
